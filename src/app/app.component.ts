@@ -8,7 +8,7 @@ import { WeatherDataService } from './weather-data.service';
 })
 export class AppComponent implements OnInit {
 
-  city:string;
+  city:string="";
   result:any;
   constructor(private data:WeatherDataService) {
   }
@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getCity() {
-    this.data.getWeather(this.city).subscribe((data)=>{
+  getCity(cityName:string) {
+    this.data.getWeather(cityName).subscribe((data)=>{
       this.result=data;
       console.log(data);
     });

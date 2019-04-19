@@ -23,4 +23,6 @@ import { DisplayboxComponent } from './displaybox/displaybox.component';
   providers: [WeatherDataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

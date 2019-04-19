@@ -9,3 +9,11 @@
 .rightElement {
     flex:1;
 }
+p {
+    color:grey;
+    margin-left:15px;
+}
+
+p > b {
+    color: black;
+}

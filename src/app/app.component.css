@@ -1,7 +1,13 @@
 .container {
     height: 100%;
-    width: 1000px;
+    width: 50%;
     display: grid;
     justify-content: center;
     align-items: center;
+    background: white;
+    padding-top:10px;
+}
+
+hr {
+    margin-top:0;
 }

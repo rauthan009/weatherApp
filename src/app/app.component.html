@@ -1,18 +1,15 @@
 <div class="container">
-<h1> Enter City</h1>
-<input type="text" name="City" [(ngModel)]="city">
-<button type="button" (click)=getCity()>Get city</button>
-<!-- <div *ngFor="let item of result.list "| ng-if>
-    <div *ngIf="(index+1)%8==0">yes</div>
-    <app-displaybox [item] = item></app-displaybox> 
-    <hr>
-</div> -->
+  <div class="dataInput">
+    <app-input-box [cityName]=city></app-input-box>
+  </div>
 
-<ng-container *ngFor="let item of result.list let i = index" [attr.data-index]="i" >
+  <ng-container *ngFor="let item of result.list let i = index" [attr.data-index]="i" class="containerChild">
     <div *ngIf="i%8==0">
-        {{item.dt_txt}}
-         <app-displaybox [item] = item></app-displaybox>
-         <hr>
-    </div> 
-     </ng-container>
-<!-- {{item.main.temp}} K {{item.weather[0].description}} {{item.main.humidity}} {{item.wind.speed}} {{item.weather[0].icon}} -->
+    <div class="boxhead">
+     <h4>{{result.city.name}}</h4>
+      {{item.dt_txt}}
+    </div>
+      <app-displaybox [item]=item></app-displaybox>
+    </div>
+  </ng-container>
+</div>
